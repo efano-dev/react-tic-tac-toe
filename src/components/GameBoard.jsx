@@ -1,15 +1,23 @@
-function GameBoard() {
+function GameBoard({ gameBoard, onButtonClick }) {
     return (
         <>
-            <button type="button" className="game-area__gameboard__button">X</button>
-            <button type="button" className="game-area__gameboard__button">O</button>
-            <button type="button" className="game-area__gameboard__button">X</button>
-            <button type="button" className="game-area__gameboard__button">O</button>
-            <button type="button" className="game-area__gameboard__button">X</button>
-            <button type="button" className="game-area__gameboard__button">O</button>
-            <button type="button" className="game-area__gameboard__button">X</button>
-            <button type="button" className="game-area__gameboard__button">O</button>
-            <button type="button" className="game-area__gameboard__button">X</button>
+            {
+                gameBoard.map((gameBoardRow, rowIndex) => {
+                    return gameBoardRow.map((gameBoardCol, colIndex) => {
+                        return (
+                            <button
+                                type="button"
+                                className="game-area__gameboard__button"
+                                onClick={() => onButtonClick(rowIndex, colIndex)}
+                                key={`${rowIndex}-${colIndex}`}
+                                disabled={gameBoardCol}
+                            >
+                                {gameBoardCol}
+                            </button>
+                        );
+                    });
+                })
+            }
         </>
     );
 }
