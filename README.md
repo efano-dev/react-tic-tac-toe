@@ -14,7 +14,3 @@ This is a Tic-Tac-Toe Game built to enhance and showcase Earnest Piolo Fano's Re
 ### Built with
 
 -   React
-
-### Links
-
--   Live Site URL: [Tic-Tac-Toe](https://react-tic-tac-toe-gamma-ruby.vercel.app/)
