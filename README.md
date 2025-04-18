@@ -13,4 +13,4 @@ This is a Tic-Tac-Toe Game built to enhance and showcase Earnest Piolo Fano's Re
 
 ### Built with
 
--   React
+- React
